@@ -10,9 +10,20 @@ export class RecipeDetailComponent implements OnInit {
 
   @Input() recipe: Recipe;
 
-  constructor() { }
 
-  ngOnInit(): void {
+  toggled: boolean = false;
+
+
+  constructor() {
   }
 
+  ngOnInit(): void {
+    console.log(this.toggled);
+  }
+
+
+  onToggle() {
+    this.toggled = !this.toggled;
+    console.log(this.toggled);
+  }
 }
