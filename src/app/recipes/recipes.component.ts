@@ -10,21 +10,11 @@ import { RecipeService } from './recipe.service';
 })
 export class RecipesComponent implements OnInit {
 
-  selectedRecipe: Recipe;
 
-  constructor(private recipeService: RecipeService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.recipeService.recipeSelected // set up listener
-      .subscribe( // subscribe recipeSelected and get informed about any changes
-        (recipe: Recipe) => { // new EventEmitter<Recipe>(); will give recipe
-          // set this selectedRecipe equal to the recipe we got with the event
-          this.selectedRecipe = recipe;
-          console.log(recipe);
-        }
-      );
-
   }
 
   // recipeService에서 이벤트에미터 만듦.
